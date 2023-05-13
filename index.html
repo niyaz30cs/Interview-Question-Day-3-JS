@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Day-3</title>
+</head>
+<body>
+    <h1 class="center">**Interview Question Day-3**</h1>
+    <h2 class="question">Q-1.What are closure?Give an example of closure.</h2>
+    <h2 class="ans">ANS:-</h2>
+    <h3>
+        <ul>
+            <li>Closure create a function ,define inside another function and access the element from parent scope.</li>
+            <li>A closure gives you access to an outer function scope from inner function.</li>
+            <li>A Closure is feature of javascript to allow inner function to access outer scope function</li>
+            <li>Closure are used for create private variable.</li>
+            <li>Example:-</li>
+            <pre>
+                function show(){
+                    let name="NIYAZ ALAM";
+                    function display(){
+                        console.log(name);
+                    }
+                    display();
+                }
+                show();
+
+
+                OUTPUT:-NIYAZ ALAM
+            </pre>
+        </ul>
+    </h3>
+<p class="star">***********************************************************************************************</p>    
+
+<h2 class="question">Q-2.Map,Filter, Reduce methods?</h2>
+<h2 class="ans">ANS:-</h2>
+<h3>
+    <ol>
+        <li>Map:-</li>
+    <ul>
+        <li>It always return the new array compared to original array.</li>
+        <li>It can't change the length of array.</li>
+        <li>Map does not change the original array.</li>
+        <li>Map does not execute the function for empty element.</li>
+        <li>Example:-</li>
+        <pre>
+            let arr=[1,2,3,4,5,6,7,8,9,10];
+
+            let arr2=arr.map((num)=>{
+                   return num*10;
+            });
+              console.log(arr2);
+
+    OUTPUT:-
+    [
+      10, 20, 30, 40,  50,
+      60, 70, 80, 90, 100
+    ]
+                    
+        </pre>
+    </ul>
+    <li>Filter:-</li>
+    <ul>
+        <li>The filter method create a new array filled with elements that pass a test provided by the function.</li>
+        <li>The filter method does not execute for empty element.</li>
+        <li>The filter method does not change the original array.</li>
+        <li>Example:-</li>
+        <pre>
+            let arr=[1,2,3,4,5,6,7,8,9,10];
+
+            let arr2=arr.filter((num)=>{
+                return num%2==0;
+             });
+              console.log(arr2);
+
+
+    OUTPUT:-[ 2, 4, 6, 8, 10 ]          
+        </pre>
+    </ul>
+    <li>Reduce:-</li>
+    <ul>
+        <li>It will be return the single value of the output by apply function of the array.</li>
+        <li>reduce method execute the reducer function for array element.</li>
+        <li>reduce method does not execute the function for empty array elements.</li>
+        <li>the reduce method does not change the original array.</li>
+        <li>Example:-</li>
+        <pre>
+            let arr=[1,2,3,4,5,6,7,8,9,10];
+
+            let arr2=arr.reduce((pre,cur)=>{
+                 return pre+cur;
+                });
+
+               console.log(arr2);
+
+        OUTPUT:-55       
+        </pre>
+    </ul>
+  </ol>  
+</h3>
+<p class="star">***********************************************************************************************</p>    
+
+<h2 class="question">Q-3.What are objects in javascript?</h2>
+<h2 class="ans">ANS:-In javascript,almost "everything"is an object.</h2>
+<h3>
+<ul>
+    <li>Booleans can be object(if define with new keyword).</li>
+    <li>Number can be object(if define with new keyword).</li>
+    <li>String can be object(if define with new keyword).</li>
+    <li>Date are always object.</li>
+    <li>Math are always object.</li>
+    <li>Regular expression are always object.</li>
+    <li>Array are always object.</li>
+    <li>Function are always object.</li>
+    <li>Object are always object.</li>
+    <li>Example:-</li>
+    <pre>
+        let person={
+            name:"NIYAZ",
+            age:21,
+            Batch:"EA22"
+        }
+        console.log(person);
+
+     
+    OUTPUT:-{ name: 'NIYAZ', age: 21, Batch: 'EA22' }    
+    </pre>
+</ul>
+</h3>
+<p class="star">***********************************************************************************************</p>    
+
+<h2 class="question">Q-4.What are the function Constructors?</h2>
+<h2 class="ans">ANS:-</h2>
+<h3>
+    <ul>
+        <li>The javascript function Constructor is used to create a new function object
+            using the function() constructor with new operator.</li>
+        <li>The javascript function Constructor create a function that has a global scope.</li>    
+        <li>object Constructor function for object.</li>
+        <li>array Constructor function for array.</li>
+        <li>this:- this keyword refer to the object.</li>
+        <li>new:-new keyword construct a function called a new object feature.</li>
+        <li>Example:-</li>
+         <pre>
+            function Car(name,year,price){
+                this.name=name;
+                this.year=year;
+                this.price=price;
+            }
+            
+            let value=new Car("audi",2001,"2.5cr");
+            
+            console.log(value);
+
+
+    OUTPUT:- Car { name: 'audi', year: 2001, price: '2.5cr' }
+       
+         </pre>
+    </ul>
+</h3>
+<p class="star">***********************************************************************************************</p>    
+
+<h2 class="question">Q-5.How many operators do we have in JS?</h2>
+<h2 class="ans">ANS:-There are different type of javascript operators.</h2>
+    <h3>
+ <ol>   
+    <li>Arithmetic Operators:-+,-,*,/,%</li>
+    <li>Assignment Operators:-=</li>
+    <li>Comparison Operator:-==,===,!=,!==</li>
+    <li>Logical Operators:-&&,||,!</li>
+    <li>Ternary Operators:-?</li>
+    <li>Conditional Operators</li>
+</ol>
+</h3>
+<p class="star">***********************************************************************************************</p>    
+<h2 class="question">Q-6.Give an example of inheritance using function constructor?</h2>
+<h2 class="ans">ANS:-Inheritance is a method which used one class property to another class.</h2>
+<h3>
+    <pre>
+        let parent={
+            name:"XYZ",
+            age:22,
+            id:101
+        }
+        
+        let child1=Object.create(parent);
+        
+        child1.surname="Sonu";
+        
+        console.log(`My name is ${child1.name} and ${child1.age} and surname is${child1.surname}`);
+
+
+    OUTPUT:-my name is XYZ and id 22 and surname is Sonu    
+    </pre>
+</h3>
+<p class="star">***********************************************************************************************</p>    
+
+<h2 class="question">Q-7.What is prototype chain?</h2>
+<h2 class="ans">ANS:-Every object in javascript has a built-in property, which is called prototype.the 
+    prototype will have its own prototype making a chain called prototype chain.
+</h2>
+<h3>
+    <ul>
+        <li>TO know how they link with each other you can check by using __proto__in the console</li>
+        which is a gatter function that express the prototype in  the console.
+        <li>Example:-prototype</li>
+    <pre>
+        function Car(name,year,price){
+            this.name=name;
+            this.year=year;
+            this.price=price;
+        }
+        
+        Car.prototype.color="black";
+        
+        let value=new Car("mercedez",2005,"5.5cr");
+        console.log(value,value.color);
+
+
+OUTPUT:-Car { name: 'mercedez', year: 2005, price: '5.5cr' } black        
+        
+  </pre>
+  <li>Example:-__proto__</li>
+  <pre>
+    function Car(name,year,price){
+        this.name=name;
+        this.year=year;
+        this.price=price;
+    }
+    
+    Car.__proto__.color="yellow";
+    
+    let value=new.Car("BMW",2006,"80lakh");
+    console.log(value,value.color);
+    
+    
+    
+  </pre>
+  </ul>
+</h3>
+<h2 class="question">Q-8.Explain prototypes?</h2>
+<h2 class="ans">ANS:-</h2>
+<h3>
+    <ul>
+        <li>Portotype are mechanism by which javascript Ojects inherit feature from one another.</li>
+        <li>Every object in javascript has built-in property, which is called prototype.</li>
+        <li>The javascript prototype property allows you to add new properties to object constructors.</li>
+        <li>In javascript every function and object has a property named prototype by default.</li>
+        <li>Example:-</li>
+        <pre>
+            function Person () {
+                this.name="NIYAZ",
+                this.age=22
+            }
+            
+            const person=new Person();
+            console.log(Person.prototype);
+        </pre>
+    </ul>
+</h3>
+<p class="star">***********************************************************************************************</p>    
+
+<h2 class="question">Q-9.Create a live clock?</h2>
+<h2 class="ans">ANS:-</h2>
+
+<div class="clock">
+    <div id="timer"></div>
+</div>
+</body>
+<script src="./script.js"></script>
+</html>
